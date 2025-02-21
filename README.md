@@ -8,7 +8,7 @@ Welcome to **Scientific Visualizations**, a collection of projects that transfor
 - 🌌 **Gluon Field Visualization** (Processing)  
 - 🧵 **String Visualization** (Processing)  
 - 🔢 **Collatz Conjecture** (Python)  
-- ❄️ **Koch Snowflake ** (Processing)  
+- ❄️ **Koch Snowflake** (Processing)  
 
 Each project has its own folder with a detailed **README.md** explaining the visualization process, scientific background, and usage instructions.
 
