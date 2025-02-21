@@ -1,4 +1,4 @@
-int numPairs = 30; // DNA çift sarmalındaki baz çiftlerinin sayısı
+int numPairs = 30;
 float angle = 0;
 float helixRadius = 100;
 float helixHeight = 15;
@@ -30,7 +30,7 @@ void draw() {
     float x2 = cos(theta + PI) * helixRadius;
     float z2 = sin(theta + PI) * helixRadius;
     
-    // Nükleotidleri belirleme
+    
     String base1 = nucleotides[(int)random(4)];
     String base2 = complementaryBase(base1);
     
@@ -39,7 +39,7 @@ void draw() {
     strokeWeight(4);
     line(x1, y, z1, x2, y, z2);
     
-    // Sarmalın birinci ipliği
+    
     fill(0, 0, 255);
     noStroke();
     pushMatrix();
@@ -49,7 +49,7 @@ void draw() {
     text(base1, 0, 0);
     popMatrix();
     
-    // Sarmalın ikinci ipliği
+    
     fill(255, 0, 0);
     noStroke();
     pushMatrix();
