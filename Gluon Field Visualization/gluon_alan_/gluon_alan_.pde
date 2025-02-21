@@ -29,18 +29,18 @@ void draw() {
   
   rotateX(PI / 6); 
   rotateY(frameCount * 0.01); 
-  // rotateZ(frameCount * 0.01); 
+  rotateZ(frameCount * 0.01); 
 
   
   for (int i = 0; i < numParticles; i++) {
     
     float x = radius[i] * cos(angleX[i]);
     float y = radius[i] * sin(angleY[i]);
-    float z = zPos[i]; // Z eksenindeki hareket
+    float z = zPos[i]; 
     
     
-    angleX[i] += speed[i] * sin(frameCount * 0.01 + i); // Dalgalı hareket
-    angleY[i] += speed[i] * cos(frameCount * 0.01 + i); // Dalgalı hareket
+    angleX[i] += speed[i] * sin(frameCount * 0.01 + i); 
+    angleY[i] += speed[i] * cos(frameCount * 0.01 + i); 
     
     
     zPos[i] += zSpeed[i];
