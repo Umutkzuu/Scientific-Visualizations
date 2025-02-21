@@ -34,7 +34,7 @@ void draw() {
     String base1 = nucleotides[(int)random(4)];
     String base2 = complementaryBase(base1);
     
-    // Bağlantı çubukları
+    
     stroke(255);
     strokeWeight(4);
     line(x1, y, z1, x2, y, z2);
