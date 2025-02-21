@@ -1,4 +1,4 @@
-int maxIterations = 6;  // Maksimum iterasyon sayısı
+int maxIterations = 6;  
 int currentIteration = 0;
 KochSnowflake snowflake;
 
@@ -13,7 +13,7 @@ void draw() {
   strokeWeight(2);
   snowflake.display();
   
-  // HER 1 SANİYEDE BİR YENİ İTERASYON EKLE
+  
   if (frameCount % 60 == 0 && currentIteration < maxIterations) {  
     currentIteration++;
     snowflake.kochIteration();
@@ -26,7 +26,7 @@ class KochSnowflake {
   KochSnowflake(int iteration) {
     points = new ArrayList<PVector>();
     
-    // Başlangıç noktalarını oluştur (eşkenar üçgen)
+    
     float size = width * 0.6;
     PVector p1 = new PVector(width / 2, height / 2 - size / sqrt(3));
     PVector p2 = new PVector(width / 2 - size / 2, height / 2 + size / (2 * sqrt(3)));
@@ -37,7 +37,7 @@ class KochSnowflake {
     points.add(p3);
     points.add(p1);
     
-    // İlk iterasyonları uygula
+    
     for (int i = 0; i < iteration; i++) {
       kochIteration();
     }
