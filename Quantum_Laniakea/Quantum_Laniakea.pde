@@ -1,4 +1,4 @@
-int numParticles = 6000;   // daha fazla parçacık
+int numParticles = 6000;   
 Particle[] particles;
 
 void setup() {
@@ -13,19 +13,19 @@ void draw() {
   background(0);
   lights();
 
-  // Kozmik döndürme
+  
   translate(width/2, height/2, -600);
   rotateY(frameCount * 0.0015);
   rotateX(frameCount * 0.001);
 
-  // Parçacıkları çiz
+  
   for (int i = 0; i < numParticles; i++) {
     particles[i].update();
     particles[i].display();
   }
 }
 
-// ===================== PARÇACIK SINIFI =====================
+
 class Particle {
   PVector pos;
   float angleOffset;
@@ -33,7 +33,7 @@ class Particle {
   float speed;
 
   Particle() {
-    radius = random(80, 600);   // alanı genişlettik
+    radius = random(80, 600);   
     float theta = random(TWO_PI);
     float phi = random(PI);
     pos = new PVector(
@@ -48,7 +48,7 @@ class Particle {
   void update() {
     float t = frameCount * speed + angleOffset;
 
-    // Spiral + dalga hareketi
+    
     float r = radius + 40*sin(t*2.0);
     float theta = t*1.2;
     float phi = PI/2 + 0.4*sin(t*1.5);
@@ -66,7 +66,8 @@ class Particle {
       255,
       intensity
     );
-    strokeWeight(2);  // küçük noktalar, ama çok sayıda
+    strokeWeight(2);  
     point(pos.x, pos.y, pos.z);
   }
 }
+
