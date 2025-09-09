@@ -9,7 +9,7 @@ void setup() {
   fullScreen();
   strokeWeight(1.2);
   noFill();
-  center = new PVector(width/2, height/2); // çekim merkezi
+  center = new PVector(width/2, height/2); 
 }
 
 void draw() {
@@ -17,7 +17,7 @@ void draw() {
   
   for (int i = 0; i < numLines; i++) {
     
-    float t = map(i, 0, numLines-1, 0.1, 1); // 0.1 = merkeze yakın, 1 = dış
+    float t = map(i, 0, numLines-1, 0.1, 1); 
     
     
     float r = map(sin(frameCount*0.02 + i), -1, 1, 100*t, 255);
@@ -46,4 +46,5 @@ void draw() {
     endShape();
   }
 }
+
 
